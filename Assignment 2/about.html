@@ -8,32 +8,29 @@
 <h1>Web Design Assignment 2</h1>
 <nav>
   <ul>
-      <li><a href="index.html">index</a></li>
-      <li><a href="faq.html">faq</a></li>
-      <li><a href="about.html">about me</a></li>
-      <li><a href="table.html">Page with table</a></li>
-      <li><a href="lorem.html">lorem ipsum</a></li>
-  </ul>
-</nav>
+      <li><a id="index" href="index.html">index</a></li>
+      <li><a id="faq" href="faq.html">faq</a></li>
+      <li><a id="about" href="about.html">about me</a></li>
+      <li><a id="table" href="table.html">Page with table</a></li>
+      <li><a id="lorem" href="lorem.html">lorem ipsum</a></li>
+  </ul></nav>
 </header>
 <center>
 
 <h2> Welcome to David Awad's personal Space. </h2>
 <ol>
-<li> <p> a place to do <b>wonderful</b> things for the sake of <b>learning</b></p> </li>
-<li> <p> this is another <b>paragraph</b> </p>  </li>
+<li> <p id="specificp"> a place to do <b>wonderful</b> things for the sake of <b>learning</b></p> </li>
+<li> <p> <span>this</span> is another <b>paragraph</b> </p>  </li>
 <li> <p> this is our third paragraph</p> </li>
 </ol>
 
-<video width="400" controls alt="big buck bunny video">
-  <source src="video/bunny.mp4" type="video/mp4">
+<video width="400" controls autoplay alt="I remember Clifford Bob Acri">
+  <source src="video/I Remember Clifford.mp4" type="video/mp4">
+  <source src="video/I Remember Clifford.ogg" type="video/ogg">
   Your browser does not support HTML5 video.
 </video>
 
-<p>
-Video courtesy of
-<a href="http://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.
-</p>
+
 
 <footer>
   <a href="http://davidawad.github.io">Website by David Awad</a>
@@ -43,6 +40,15 @@ Video courtesy of
 /* change the background image page by page */
 html, body{
 background-image: url("img/desks.jpeg");
+}
+h1{
+  color:blue;
+}
+p{
+  font-size:1.1em;
+}
+#about{
+  color:red;
 }
 </style>
 

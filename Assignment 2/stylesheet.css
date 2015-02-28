@@ -1,11 +1,15 @@
 html, body {
-  font-family: 100% Helvetica, sans-serif;
+  font-family: 100% serif, sans-serif;
   color: #333;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   text-rendering: optimizeLegibility; }
+
+*::selection {
+  background: #323232;
+  color: white; }
 
 nav a {
   color: teal;
@@ -21,13 +25,22 @@ h2 {
 
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0; }
+  margin: 1px;
+  padding: 5px; }
 
 li {
   display: inline; }
 
 p {
   color: black; }
+
+div p {
+  color: red; }
+
+#specificp {
+  color: white; }
+
+a:hover {
+  padding: 10px; }
 
 /*# sourceMappingURL=stylesheet.css.map */

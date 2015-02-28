@@ -1,4 +1,4 @@
-$font-stack: Helvetica, sans-serif;
+$font-stack: serif, sans-serif;
 $light-green: #333;
 $my_color: teal;
 
@@ -10,6 +10,11 @@ html, body {
   -o-background-size: cover;
   background-size: cover;
   text-rendering: optimizeLegibility;
+}
+
+*::selection {
+  background: #323232;
+  color: white;
 }
 
 nav {
@@ -32,8 +37,8 @@ h2{
 
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 1px;
+    padding: 5px;
 }
 
 li {
@@ -42,4 +47,16 @@ li {
 
 p{
   color:black;
+}
+
+div p{
+  color:red;
+}
+
+#specificp {
+    color: white;
+}
+
+a:hover{
+  padding:10px;
 }
