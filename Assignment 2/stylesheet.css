@@ -43,4 +43,18 @@ div p {
 a:hover {
   padding: 10px; }
 
+#sax{
+  float:left; }
+
+p.clear{
+  clear:both;
+}
+
+#loremP{
+  float:right;
+}
+
+#loremP2{
+  float:left;
+}
 /*# sourceMappingURL=stylesheet.css.map */
