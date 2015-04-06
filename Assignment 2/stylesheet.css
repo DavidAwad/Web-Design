@@ -37,10 +37,10 @@ p {
 div p {
   color: red; }
 
-#specificp {
+#specificp{
   color: white; }
 
-a:hover {
+a{
   padding: 10px; }
 
 #sax{
