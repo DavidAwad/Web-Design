@@ -1,0 +1,60 @@
+html, body {
+  font-family: 100% serif, sans-serif;
+  color: #333;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-rendering: optimizeLegibility; }
+
+*::selection {
+  background: #323232;
+  color: white; }
+
+nav a {
+  color: teal;
+  text-decoration: none; }
+  nav a:hover {
+    color: #004d4d; }
+
+h1 {
+  font-size: 1.5em; }
+
+h2 {
+  font-family: Georgia; }
+
+ul {
+  list-style-type: none;
+  margin: 1px;
+  padding: 5px; }
+
+li {
+  display: inline; }
+
+p {
+  color: black; }
+
+div p {
+  color: red; }
+
+#specificp{
+  color: white; }
+
+a{
+  padding: 10px; }
+
+#sax{
+  float:left; }
+
+p.clear{
+  clear:both;
+}
+
+#loremP{
+  float:right;
+}
+
+#loremP2{
+  float:left;
+}
+/*# sourceMappingURL=stylesheet.css.map */

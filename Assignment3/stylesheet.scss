@@ -1,0 +1,62 @@
+$font-stack: serif, sans-serif;
+$light-green: #333;
+$my_color: teal;
+
+html, body {
+  font-family: 100% $font-stack;
+  color: $light-green;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-rendering: optimizeLegibility;
+}
+
+*::selection {
+  background: #323232;
+  color: white;
+}
+
+nav {
+  a{
+    color: $my_color;
+    text-decoration:none;
+    &:hover {
+      color: darken($my_color, 10%);
+    }
+  }
+}
+
+h1{
+  font-size:1.5em;
+}
+
+h2{
+  font-family: Georgia;
+}
+
+ul {
+    list-style-type: none;
+    margin: 1px;
+    padding: 5px;
+}
+
+li {
+    display: inline;
+}
+
+p{
+  color:black;
+}
+
+div p{
+  color:red;
+}
+
+#specificp {
+    color: white;
+}
+
+a:hover{
+  padding:10px;
+}
