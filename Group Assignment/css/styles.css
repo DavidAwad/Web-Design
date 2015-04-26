@@ -1,0 +1,244 @@
+﻿html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote, article, header, footer, main, nav {
+	padding: 0px;
+	margin: 0px;
+	font-size: 100%;
+	font-weight: normal;
+}
+
+a {
+	text-decoration:none;
+}
+
+body {
+	background-color:#DDDDDD;
+	overflow-y:scroll;
+}
+
+header {
+	background-color:#D21034;
+	padding:15px 0px 0px 0px;
+}
+
+div.title {
+	width:900px;
+	margin:0px auto;
+	font-family: 'Oswald', sans-serif;
+	font-size:50px;
+	color:#FFFFFF;
+}
+
+div.login {
+	width:100px;
+	float:right;
+	padding:10px;
+	font-size:20px;
+	margin-top:13px;
+	font-family: 'Oswald', sans-serif;
+	color:#FFFFFF;
+	background-color:#930B24;
+	border-radius:0px;
+	text-align:center;
+}
+
+input.signin {
+	width:300px;
+	padding:10px;
+	font-size:20px;
+	margin-top:30px;
+	font-family: 'Oswald', sans-serif;
+	color:#FFFFFF;
+	background-color:#930B24;
+	border:0px;
+	text-align:center;
+}
+
+div.login:hover, input.signin:hover {
+	background-color:#DDDDDD;
+	color:#000000;
+	cursor:pointer;
+}
+
+#loginbox {
+	position:absolute;
+	width:300px;
+	padding:25px;
+	top:78px;
+	left:50%;
+	margin-left:90px;
+	background-color:#555555;
+	border:5px solid #FFCC00;
+}
+
+p.logintitle, span.logintitle {
+	font-family: 'Oswald', sans-serif;
+	font-size:18px;
+	color:#FFFFFF;
+}
+
+input.login {
+	width:100%;
+	font-family: 'Verdana', sans-serif;
+	font-size:17px;
+	padding:5px 0px;
+	text-indent:5px;
+	background-color:#DDDDDD;
+	border:0px;
+	border-radius:0px;
+}
+
+nav {
+	background-color:#930B24;
+	font-size:20px;
+	margin-top:15px;
+	border-radius:5px 5px 0px 0px;
+	width:500px;
+	height:50px;
+}
+
+nav ul {
+	display:inline-table;
+	position:relative;
+	list-style:none;
+	height:50px;
+}
+
+nav ul li {
+	float:left;
+}
+
+nav ul li a {
+	display:block;
+	padding:10px 25px;
+	color:#FFFFFF;
+}
+
+nav ul li:hover a {
+	color:#FFCC00;
+}
+
+main {
+	display:block;
+}
+
+div.content{
+	width:850px;
+	padding:25px;
+	margin:0px auto;
+	border-radius:0px 0px 5px 5px;
+	background-color:#930B24;
+}
+
+h1.pagetitle {
+	font-family: 'Oswald', sans-serif;
+	font-size:25px;
+	color:#FFFFFF;
+	border-bottom:2px solid #FFFFFF;
+}
+
+h2.posttitle {
+	font-family: 'Oswald', sans-serif;
+	font-size:20px;
+	color:#FFFFFF;
+	border-bottom:2px solid #FFFFFF;
+	margin-bottom:5px;
+}
+
+div.description {
+	width:820px;
+	padding:15px;
+	margin-top:20px;
+	background-color:#DDDDDD;
+	border-radius:5px;
+	font-family:'Verdana',sans-serif;
+}
+
+ul.bullets {
+	margin-top:10px;
+	padding-left:50px;
+	list-style-image:url('../images/bullet.png');
+	font-size:20px;
+}
+
+div.description p.explain {
+	margin:10px 0px 10px 50px;
+	background:#999999;
+	padding:5px;
+	font-size:17px;
+}
+
+footer {
+	width:100%;
+	margin:20px auto;
+	padding:20px 0px;
+	background:#333333;
+}
+
+p.credits {
+	font-family: 'Verdana', sans-serif;
+	font-size:15px;
+	color:#FFFFFF;
+	text-align:center;
+}
+
+input.createacc {
+	width:400px;
+	font-family: 'Verdana', sans-serif;
+	font-size:20px;
+	padding:8px 0px 10px 0px;
+	text-indent:5px;
+	background-color:#DDDDDD;
+	border:0px;
+	border-radius:0px;
+}
+
+input.button {
+	width:200px;
+	padding:10px;
+	font-size:20px;
+	margin-top:30px;
+	font-family: 'Oswald', sans-serif;
+	color:#FFFFFF;
+	background-color:#D21034;
+	border:0px;
+	text-align:center;
+}
+
+input.button:hover {
+	background-color:#DDDDDD;
+	color:#000000;
+	cursor:pointer;
+}
+
+div.menutext {
+	display:block;
+	padding:10px 25px;
+	color:#FFFFFF;
+}
+
+textarea.userpost {
+	width:639px;
+	height:43px;
+	font-family: 'Verdana', sans-serif;
+	font-size:18px;
+	margin-top:10px;
+	padding:5px 0px;
+	text-indent:5px;
+	background-color:#DDDDDD;
+	border:0px;
+	border-radius:0px;
+}
+
+div.postsarea {
+	width:900px;
+	margin:0px auto;
+}
+
+div.post {
+	background:gray;
+	width:500px;
+	padding:25px;
+	margin:20px 0px;
+	font-family: 'Verdana', sans-serif;
+	font-size:20px;
+	border-radius:5px;
+}

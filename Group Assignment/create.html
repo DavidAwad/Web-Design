@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<link rel="stylesheet" href="./css/styles.css" type="text/css"/>
+	<link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+	<title>RUclassboard</title>
+</head>
+
+<body>
+<header role="banner">
+	<div class="title">
+		<div class="login" onclick="openLogin();">Login</div>
+		<p>RUclassboard</p>
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="about.html">About</a>
+				</li>
+				<li>
+					<a href="#" style="color:#FFCC00;">Create an Account</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<main role="main">
+	<div id="loginbox" style="display:none">
+		<form method="post" action="userpanel.php">
+			<p class="logintitle">Username:</p>
+			<input name="username" class="login" type="text" placeholder="Username" required />
+			<p class="logintitle" style="margin-top:15px;">Password:</p>
+			<input name="password" class="login" type="password" placeholder="Password" required />
+			<input name="userid" type="hidden" value="0"/>
+			<input name="class" type="hidden" value=""/>
+			<input name="message" type="hidden" value="NONE"/>
+			<input class="signin" type="submit" value="Sign in"/>
+			<div class="login" style="float:none;width:280px;" onclick="closeLogin();">Cancel</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="./scripts/login.js"></script>
+	
+	<div class="content">
+		<h1 class="pagetitle">Create an Account</h1>
+		<div class="description">Please type in a username and password below.  Usernames and passwords must be at least 5 characters long and contain no spaces or special characters.</div>
+		<br/>
+		<form method="post" action="create_account.php">
+			<label>
+				<span class="logintitle">Username:</span>
+				<input name="createusername" type="text" class="createacc" style="margin-left:62px" placeholder="Username" required />
+			</label>
+			<br/><br/>
+			<label>
+				<span class="logintitle">Password:</span>
+				<input name="createpassword" type="password" class="createacc" style="margin-left:66px" placeholder="Password" required />
+			</label>
+			<br/><br/>
+			<label>
+				<span class="logintitle">Confirm Password:</span>
+				<input name="createpasswordconfirm" type="password" class="createacc" style="margin-left:5px" placeholder="Password" required />
+			</label>
+			<br/>
+			<input class="button" type="submit" value="Create Account"/>
+		</form>
+	</div>
+</main>
+
+<footer role="contentinfo">
+	<p class="credits">&copy; 2015 | Created by: Nicholas Cristiano, Abanoub David Awad, and Philip AhKao</p>
+</footer>
+
+</body>
+
+</html>

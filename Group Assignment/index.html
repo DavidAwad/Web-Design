@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<link rel="stylesheet" href="./css/styles.css" type="text/css"/>
+	<link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+
+
+	<script type="text/javascript" src="./scripts/login.js"></script>
+
+	<title>RUclassboard</title>
+
+
+</head>
+
+<body>
+<header role="banner">
+	<div class="title">
+		<div class="login" onclick="openLogin();">Login</div>
+		<p>RUclassboard</p>
+		<nav>
+			<ul>
+				<li>
+					<a href="#" style="color:#FFCC00;">Home</a>
+				</li>
+				<li>
+					<a href="about.html">About</a>
+				</li>
+				<li>
+					<a href="create.html">Create an Account</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<main role="main">
+	<div id="loginbox" style="display:none">
+		<form method="post" action="userpanel.php">
+			<p class="logintitle">Username:</p>
+			<input name="username" class="login" type="text" placeholder="Username" required />
+
+			<p class="logintitle" style="margin-top:15px;">Password:</p>
+
+			
+			<input name="password" class="login" type="password" placeholder="Password" required />
+			<input name="userid" type="hidden" value="0"/>
+			<input name="class" type="hidden" value=""/>
+			<input name="message" type="hidden" value="NONE"/>
+			<input class="signin" type="submit" value="Sign in"/>
+			<div class="login" style="float:none;width:280px;" onclick="closeLogin();">Cancel</div>
+		</form>
+	</div>
+	
+	<div class="content">
+		<h1 class="pagetitle">Home</h1>
+		<div class="description">
+			<p>Welcome to <strong>RUclassboard!</strong>  RUclassboard is an online forum where students can connect with others outside of class.  This website is open for all Rutgers students.</p>
+			<br/>
+			<p>Create an account today to start:</p>
+			<ul class="bullets">
+				<li>Interacting with other students</li>
+				<li>Ask questions related to your class</li>
+				<li>Be updated on class announcements</li>
+			</ul>
+			<div style="margin-top:10px;text-align:center">
+				<img class="picture" src="./images/rutgers.jpg" alt="Rutgers"/>
+			</div>
+		</div>
+	</div>
+</main>
+
+<footer role="contentinfo">
+	<p class="credits">&copy; 2015 | Created by: Nicholas Cristiano, Abanoub David Awad, and Philip AhKao</p>
+</footer>
+
+</body>
+
+</html>

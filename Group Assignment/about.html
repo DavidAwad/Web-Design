@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<link rel="stylesheet" href="./css/styles.css" type="text/css"/>
+	<link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+	<title>RUclassboard</title>
+</head>
+
+<body>
+<header role="banner">
+	<div class="title">
+		<div class="login" onclick="openLogin();">Login</div>
+		<p>RUclassboard</p>
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="#" style="color:#FFCC00;">About</a>
+				</li>
+				<li>
+					<a href="create.html">Create an Account</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<main role="main">
+	<div id="loginbox" style="display:none">
+		<form method="post" action="userpanel.php">
+			<p class="logintitle">Username:</p>
+			<input name="username" class="login" type="text" placeholder="Username" required />
+			<p class="logintitle" style="margin-top:15px;">Password:</p>
+			<input name="password" class="login" type="password" placeholder="Password" required />
+			<input name="userid" type="hidden" value="0"/>
+			<input name="class" type="hidden" value=""/>
+			<input name="message" type="hidden" value="NONE"/>
+			<input class="signin" type="submit" value="Sign in"/>
+			<div class="login" style="float:none;width:280px;" onclick="closeLogin();">Cancel</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="./scripts/login.js"></script>
+	
+	<div class="content">
+		<h1 class="pagetitle">About</h1>
+		<div class="description">
+			<p>RUclassboard offers several features:</p>
+			
+			<ul class="bullets">
+				<li>Classboards are created by unique names</li>
+			</ul>
+			<p class="explain">Users are required to connect to a class by typing in a keyword to identify with the course.  After entering in the keyword, all posts related to the keyword will display.</p>
+			
+			<ul class="bullets">
+				<li>All posts are tracked with times</li>
+			</ul>
+			<p class="explain">Posts are ordered by time for easy viewing.  Newest posts are shown at the top and each post displays the time.</p>
+			
+			<ul class="bullets">
+				<li>Each classboard contains an activity area to show various class statistics</li>
+			</ul>
+			<p class="explain">Total posts and unique users will be shown.</p>
+			
+			<ul class="bullets">
+				<li>Accounts are password protected</li>
+			</ul>
+			<p class="explain">Users can only access RUclassboard through an account which is protected by a password.</p>
+			<br/>
+			<p></p>
+		</div>
+	</div>
+</main>
+
+<footer role="contentinfo">
+	<p class="credits">&copy; 2015 | Created by: Nicholas Cristiano, Abanoub David Awad, and Philip AhKao</p>
+</footer>
+
+</body>
+
+</html>

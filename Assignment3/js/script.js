@@ -1,7 +1,7 @@
 var current_hour = new Date().getHours();
 
 function editTime(greeting){
-  var pText = document.getElementById("greeting");
+  var pText = document.getElementById("greetingONE");
   if(name === "morning"){
     pText.innerHTML = "Morning : D" ;
   }else{
@@ -12,7 +12,7 @@ function editTime(greeting){
 
 if(current_hour >= 12 ){
   // it's the afternoon / evening
-  console.log("good afternoon/night.");
+  console.log("good afternoon.");
   editTime("afternoon");
 
 }else{

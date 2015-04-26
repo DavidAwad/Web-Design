@@ -9,9 +9,6 @@ attribution to the photographer or Unsplash.
 
 for the full license and the privacy policy please refer to https://unsplash.com/license
 
-CSS written using the SASS/SCSS preprocessor, which can be found at http://sass-lang.com
-
-
 Youtube Videos Used with Attribution:
 
 The story of Jazz Documentary -- https://www.youtube.com/watch?v=pL8yX5b3ObA
