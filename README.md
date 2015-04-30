@@ -8,7 +8,9 @@ So the current version of this site will be available at http://studentweb.commi
 
 instructions for uploading.
 
-download an SFTP client. give it a host of `sftp://studentweb.comminfo.rutgers.edu`
+download an SFTP client. give it a host of 
+
+`sftp://studentweb.comminfo.rutgers.edu`
 
 with a directory of `/www/studentweb.comminfo.rutgers.edu/htdocs/class-2015-1-04-547-320-03/your_RU_NetID`
 
