@@ -36,14 +36,18 @@
 
 	<body>
 
-
+		<form>
+			<h2> Search for names in our database! Super secure, we know. </h2>
+				First Name:<input type="text" name="firstName" required>
+		    <input type="submit">
+		</form>
 
 
 		<?php
 
       $query = $_POST['firstName']; // This gets the value that the user entered in the search form.
 
-      require_once 'login.php'; // remember to change to your NetID
+      require_once 'login.php';
 			$db_server = mysql_connect($db_hostname, $db_username, $db_password);
 			if (!$db_server) die("Unable to connect to MySQL: " . mysql_error());
 			mysql_select_db($db_database) or die("Unable to select database: " . mysql_error());
@@ -69,7 +73,7 @@
 	   				while($results = mysql_fetch_array($raw_results)){
 	    				// $results = mysql_fetch_array($raw_results) puts data from the database into array, while it is valid, it performs the loop
 
-						echo "<p><h3>".$results['author']."</h3>".$results['title']."</p>";
+						echo "<p><h3>".$results['firstName']."</h3>".$results['lastName']."</p>";
 						// Posting the results fetched from the database("author" and "title"). We could also show id ($results['id']) or other fields.
             		}
             	}

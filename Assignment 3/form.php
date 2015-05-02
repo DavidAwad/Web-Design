@@ -36,7 +36,19 @@
   </ul>
 </nav>
 </header>
+
 <div style="text-align:center">
+
+  <form>
+
+    First Name: <input type="text" name="firstName" required>
+    Last Name: <input type="text" name="lastName" required>
+    Email: <input type="text" name="email" required>
+    City: <input type="text" name="city" required>
+    Zip Code:<input type="text" name="zipcode" required>
+    <input type="submit">
+
+  </form>
 
   <br> <br>
 
@@ -44,17 +56,7 @@
 
   <img onmouseout="this.src='img/node.svg'" onmouseover="this.src='img/mongodb.png'" id="rollover" width="800px" height="400px" src="img/node.svg"/>
 
-  <form>
-    First Name: <input type="text" name="firstName" required>
-    Last Name: <input type="text" name="lastName" required>
-    Email: <input type="text" name="email" required>
-    City: <input type="text" name="city" required>
-    Zip Code:<input type="text" name="zipcode" required>
-
-    <input type="submit">
-  </form>
-
-
+  <br> <br>
 
   <footer>
     <a href="http://davidawad.github.io">Website by David Awad</a>
@@ -76,13 +78,12 @@
 
   </style>
   </body>
-  </html>
+</html>
 
   <!-- Web Design Assignment 3 By David Awad-->
-
   <?php
 
-  	require_once 'login.php'; // remember to change to your lastname
+  	require_once 'login.php';
   	$db_server = mysql_connect($db_hostname, $db_username, $db_password);
   	if (!$db_server) die("Unable to connect to MySQL: " . mysql_error());
   	mysql_select_db($db_database) or die("Unable to select database: " . mysql_error());
@@ -104,8 +105,8 @@
   	else
   		echo "There was a problem while saving the data.";
 
-  	function mysql_fix_string($string) // This function "sanitizes" data to prevent malcious code.
-  	{
+  	function mysql_fix_string($string){ // This function "sanitizes" data to prevent malcious code.
+
   		if (get_magic_quotes_gpc())
   			$string = stripslashes($string);
   		return mysql_real_escape_string($string);
