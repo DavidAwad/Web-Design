@@ -54,8 +54,6 @@
 
   <img onmouseover="this.src='img/hack_ru_logo.png'" onmouseout="this.src='img/muse.png'" id="rollover" width="800px" height="400px" src="img/muse.png"/>
 
-  <img onmouseout="this.src='img/node.svg'" onmouseover="this.src='img/mongodb.png'" id="rollover" width="800px" height="400px" src="img/node.svg"/>
-
   <br> <br>
 
   <footer>
