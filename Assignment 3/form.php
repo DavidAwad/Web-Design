@@ -46,6 +46,7 @@
 
   <br> <br>
 
+  <h2>Search our Userbase <a href="search.php" style="text-decoration:none;">here</a>!</h2>
 
 <h2>Sign Up for our email list!</h2>
 
@@ -53,8 +54,6 @@
     First Name: <input type="text" name="firstName" required>
     Last Name: <input type="text" name="lastName" required>
     Email: <input type="text" name="email" required>
-    City: <input type="text" name="city" required>
-    Zip Code:<input type="text" name="zipcode" required>
     <input type="submit">
   </form>
 
@@ -83,9 +82,15 @@
   </style>
   </body>
 </html>
-
   <!-- Web Design Assignment 3 By David Awad-->
-  <?php
+
+<?php
+
+    /*
+    phpinfo();
+    ini_set('display_errors', 'On');
+    error_reporting(E_ALL | E_STRICT);
+    */
 
   	require_once 'login.php';
   	$db_server = mysql_connect($db_hostname, $db_username, $db_password);
@@ -95,19 +100,20 @@
   	$firstName = mysql_fix_string( $_POST['firstName'] );
   	$lastName = mysql_fix_string($_POST['lastName']);
   	$email = mysql_fix_string($_POST['email']);
-  	$city = mysql_fix_string($_POST['city']);
-  	$zipcode = mysql_fix_string($_POST['zipcode']);
-  	$operatingSystem = mysql_fix_string(implode(",", $_POST['os']));
 
-  	$query = "INSERT INTO users (firstName, lastName, email, city, zipcode, operatingSystem)
-  					     VALUES ('$firstName','$lastName','$email','$city', '$zipcode','$operatingSystem')";
 
-  	$result = mysql_query($query) or die(" ". mysql_error());
+  	$query = "INSERT INTO users (firstName, lastName, email) VALUES ('$firstName', '$lastName', '$email')";
+
+    echo $query;
+
+    //die();
+
+    $result = mysql_query($query) or die(" ". mysql_error());
 
 
 
   	if($result)
-  		echo "Data Saved Successfully!";
+  		echo "Try Inserting Data!!";
   	else
   		echo "There was a problem while saving the data.";
 

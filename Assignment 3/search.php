@@ -56,7 +56,7 @@
 
 		<h2>Welcome to David Awad's personal Space.</h2>
 
-		<h2>Sign up for the mailing list <a href="form.php" style="text-decoration:none;">here!</a> Or Search our Userbase <a href="search.php" style="text-decoration:none;">here</a>!</h2>
+		<h2>Sign up for the mailing list <a href="form.php" style="text-decoration:none;">here</a>!</h2>
 
 
 
@@ -81,7 +81,7 @@
 
 				if(strlen($query) >= $min_length){ // If the length of the query is more or equal minimum length, then following operations will be performed:
 
-						$query = htmlspecialchars($query); // This changes the special characters of the query to their equivalents, for example: "<" to "&gt;"
+						$query = htmlspecialchars($query);
 
 						$query = mysql_real_escape_string($query);
 						// makes sure nobody uses SQL injection
