@@ -39,22 +39,28 @@
 
 <div style="text-align:center">
 
-  <form>
+  <br> <br>
 
+  <h2>We Love Our Sponsors!<h2>
+  <img onmouseover="this.src='img/logo-dark.png'" onmouseout="this.src='img/muse.png'" id="rollover" width="1000px" height="400px" src="img/hack_ru_logo.png"/>
+
+  <br> <br>
+
+
+<h2>Sign Up for our email list!</h2>
+
+  <form>
     First Name: <input type="text" name="firstName" required>
     Last Name: <input type="text" name="lastName" required>
     Email: <input type="text" name="email" required>
     City: <input type="text" name="city" required>
     Zip Code:<input type="text" name="zipcode" required>
     <input type="submit">
-
   </form>
 
-  <br> <br>
-
-  <img onmouseover="this.src='img/hack_ru_logo.png'" onmouseout="this.src='img/muse.png'" id="rollover" width="800px" height="400px" src="img/muse.png"/>
 
   <br> <br>
+
 
   <footer>
     <a href="http://davidawad.github.io">Website by David Awad</a>
@@ -86,7 +92,7 @@
   	if (!$db_server) die("Unable to connect to MySQL: " . mysql_error());
   	mysql_select_db($db_database) or die("Unable to select database: " . mysql_error());
 
-  	$firstName = mysql_fix_string(   $_POST['firstName'] );
+  	$firstName = mysql_fix_string( $_POST['firstName'] );
   	$lastName = mysql_fix_string($_POST['lastName']);
   	$email = mysql_fix_string($_POST['email']);
   	$city = mysql_fix_string($_POST['city']);
@@ -97,6 +103,8 @@
   					     VALUES ('$firstName','$lastName','$email','$city', '$zipcode','$operatingSystem')";
 
   	$result = mysql_query($query) or die(" ". mysql_error());
+
+
 
   	if($result)
   		echo "Data Saved Successfully!";

@@ -61,10 +61,74 @@
 
 
 		<form>
-			<h2> Search for names in our database! Super secure, we know. </h2>
+			<h2> Search for names in our database, you can find their emails this way! Super secure, we know. </h2>
 				First Name:<input type="text" name="firstName" required>
 		    <input type="submit">
 		</form>
+
+
+		<?php
+
+			$query = $_POST['firstName']; // This gets the value that the user entered in the search form.
+
+			require_once 'login.php';
+			$db_server = mysql_connect($db_hostname, $db_username, $db_password);
+			if (!$db_server) die("Unable to connect to MySQL: " . mysql_error());
+			mysql_select_db($db_database) or die("Unable to select database: " . mysql_error());
+
+
+				$min_length = 3; // We can set minimum length of the query. This is optional.
+
+				if(strlen($query) >= $min_length){ // If the length of the query is more or equal minimum length, then following operations will be performed:
+
+						$query = htmlspecialchars($query); // This changes the special characters of the query to their equivalents, for example: "<" to "&gt;"
+
+						$query = mysql_real_escape_string($query);
+						// makes sure nobody uses SQL injection
+
+						$raw_results = mysql_query("SELECT * FROM users WHERE (firstName LIKE '%".$query."%') OR (lastName LIKE '%".$query."%')") or die(mysql_error());
+
+						if(mysql_num_rows($raw_results) > 0){ // If one or more rows are returned, do following:
+
+						while($results = mysql_fetch_array($raw_results)){
+							// $results = mysql_fetch_array($raw_results) puts data from the database into array, while it is valid, it performs the loop
+
+						echo "<p><h3>".$results['firstName']."</h3>".$results['lastName']."</p>";
+						// Posting the results fetched from the database("author" and "title"). We could also show id ($results['id']) or other fields.
+								}
+							}
+						else{ // If there are no matches rows do the following:
+								echo "Your search produced no results"; // You could add some CSS code here, of course.
+						}
+
+				}
+				else{ // If the length of the query is less than the minimum we assigned, do the following:
+							echo "*Minimum length is ".$min_length."*";
+				}
+		?>
+
+		<?php
+					require_once 'login.php';
+					$db_server = mysql_connect($db_hostname, $db_username, $db_password);
+					if (!$db_server) die("Unable to connect to MySQL: " . mysql_error());
+					mysql_select_db($db_database) or die("Unable to select database: " . mysql_error());
+
+					$raw_results = mysql_query("SELECT * FROM users") or die(mysql_error());
+
+					if(mysql_num_rows($raw_results) > 0){ // If one or more rows are returned, do following:
+
+					while($results = mysql_fetch_array($raw_results)){
+
+					// search for users in the db
+
+					echo "<p>".$results['firstName']." ".$results['lastName']."</p>";
+					// Posting the results fetched from the database("author" and "title"). We could also show id ($results['id']) or other fields.
+							}
+						}
+		?>
+
+
+
 
 		<footer>
 		  <script type="text/javascript" src="js/script.js"></script>
@@ -88,49 +152,6 @@
 
 	</body>
 
-	<?php
-
-		$query = $_POST['firstName']; // This gets the value that the user entered in the search form.
-
-		require_once 'login.php';
-		$db_server = mysql_connect($db_hostname, $db_username, $db_password);
-		if (!$db_server) die("Unable to connect to MySQL: " . mysql_error());
-		mysql_select_db($db_database) or die("Unable to select database: " . mysql_error());
-
-
-			$min_length = 3; // We can set minimum length of the query. This is optional.
-
-			if(strlen($query) >= $min_length){ // If the length of the query is more or equal minimum length, then following operations will be performed:
-
-					$query = htmlspecialchars($query); // This changes the special characters of the query to their equivalents, for example: "<" to "&gt;"
-
-					$query = mysql_real_escape_string($query);
-					// makes sure nobody uses SQL injection
-
-					$raw_results = mysql_query("SELECT * FROM users WHERE (firstName LIKE '%".$query."%') OR (lastName LIKE '%".$query."%')") or die(mysql_error());
-					// "classics" is the name of our table
-					// * means that we select all fields. You could also write: "id", "author", "title"
-					// '%$query%' is the search term. % means "anything", for example if $query is "Jane" it will match "Jane Austen", "Jane Eyre," "Aunt Jane," etc.
-					// If you want exact match, you need to use title='$query'
-
-					if(mysql_num_rows($raw_results) > 0){ // If one or more rows are returned, do following:
-
-					while($results = mysql_fetch_array($raw_results)){
-						// $results = mysql_fetch_array($raw_results) puts data from the database into array, while it is valid, it performs the loop
-
-					echo "<p><h3>".$results['firstName']."</h3>".$results['lastName']."</p>";
-					// Posting the results fetched from the database("author" and "title"). We could also show id ($results['id']) or other fields.
-							}
-						}
-					else{ // If there are no matches rows do the following:
-							echo "Your search produced no results"; // You could add some CSS code here, of course.
-					}
-
-			}
-			else{ // If the length of the query is less than the minimum we assigned, do the following:
-						echo "Minimum length is ".$min_length;
-			}
-	?>
 
 
 </html>

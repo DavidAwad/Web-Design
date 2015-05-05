@@ -6,6 +6,5 @@ CREATE TABLE users (
     city TEXT NOT NULL,
     zipcode TEXT NOT NULL,
     operatingSystem TEXT NOT NULL,
-    PRIMARY KEY (id),
-    UNIQUE INDEX email_UNIQUE (email ASC)
+    PRIMARY KEY (id)
 );
